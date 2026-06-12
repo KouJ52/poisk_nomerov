@@ -31,7 +31,7 @@ std::string normalizePhoneNumber(const std::string& raw) {
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    std::cout << "Ââåäèòå òåêñò";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÐºÑÑ‚";
     std::cin >> std::noskipws;
     std::string text((std::istreambuf_iterator<char>(std::cin)), std::istreambuf_iterator<char>());
 
@@ -62,12 +62,12 @@ int main() {
         if (!norm.empty()) phones.insert(norm);
     }
 
-    std::cout << "Íàéäåííûå email-àäðåñà:" << std::endl;
-    if (emails.empty()) std::cout << "  íåò" << std::endl;
+    std::cout << "ÐÐ°Ð¹Ð´ÐµÐ½Ð½Ñ‹Ðµ email-Ð°Ð´Ñ€ÐµÑÐ°:" << std::endl;
+    if (emails.empty()) std::cout << "Ð½ÐµÑ‚" << std::endl;
     else for (const auto& email : emails) std::cout << "  " << email << std::endl;
 
-    std::cout << "\nÍàéäåííûå òåëåôîííûå íîìåðà:" << std::endl;
-    if (phones.empty()) std::cout << "  íåò" << std::endl;
+    std::cout << "\nÐÐ°Ð¹Ð´ÐµÐ½Ð½Ñ‹Ðµ Ð½Ð¾Ð¼ÐµÑ€Ð° Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð¾Ð²:" << std::endl;
+    if (phones.empty()) std::cout << "Ð½ÐµÑ‚" << std::endl;
     else for (const auto& phone : phones) std::cout << "  " << phone << std::endl;
 
     return 0;
